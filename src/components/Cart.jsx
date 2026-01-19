@@ -1,16 +1,13 @@
+// src/components/Cart.jsx
 import React from 'react'
 
-const Cart = ({ cartItems }) => {
-  if (cartItems.length === 0) return null
-
+const Cart = ({ cart }) => {
   return (
     <div>
       <h2>Shopping Cart</h2>
       <ul>
-        {cartItems.map((item, index) => (
-          <li key={index}>
-            {item.name} is in your cart.
-          </li>
+        {cart.map((item, index) => (
+          <li key={index}>{item.name} is in your cart.</li>
         ))}
       </ul>
     </div>
@@ -18,4 +15,5 @@ const Cart = ({ cartItems }) => {
 }
 
 export default Cart
+
 
